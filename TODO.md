@@ -7,4 +7,5 @@
 - [x] Install Flask dependency
 - [x] Run the server and test all CRUD endpoints
 - [x] Verify validation and error handling
-- [ ] Initialize git (already done) and prepare for GitHub push
+- [x] Initialize git (already done) and prepare for GitHub push
+- [x] Push code to public GitHub repository
