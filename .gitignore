@@ -1,4 +1,21 @@
-node_modules/
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Database files
 *.db
+*.db-wal
+*.db-shm
+
+# Environment
 .env
-npm-debug.log*
+
+# Logs
+*.log
+
+# Virtual environment
+.vscode/
