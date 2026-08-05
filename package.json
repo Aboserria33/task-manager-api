@@ -1,0 +1,23 @@
+{
+  "name": "task-manager-api",
+  "version": "1.0.0",
+  "description": "A production-ready Task Manager REST API with persistent SQLite storage",
+  "main": "src/index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "keywords": ["task-manager", "rest-api", "express", "sqlite"],
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2",
+    "better-sqlite3": "^11.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
