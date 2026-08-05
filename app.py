@@ -35,6 +35,27 @@ def internal_error(error):
     return jsonify({"error": "Internal server error"}), 500
 
 
+@app.route("/", methods=["GET"])
+def index():
+    """Return API overview so the root URL is informative."""
+    return (
+        jsonify(
+            {
+                "name": "Task Manager API",
+                "message": "Welcome to the Task Manager API",
+                "endpoints": {
+                    "POST /tasks": "Create a new task",
+                    "GET /tasks": "Retrieve all tasks",
+                    "GET /tasks/<id>": "Retrieve a task by id",
+                    "PUT /tasks/<id>": "Update a task",
+                    "DELETE /tasks/<id>": "Delete a task",
+                },
+            }
+        ),
+        200,
+    )
+
+
 @app.route("/tasks", methods=["POST"])
 def create_task():
     data = request.get_json(silent=True)
