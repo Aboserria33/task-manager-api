@@ -97,6 +97,29 @@ task-manager-api/
 
 ## API Endpoints
 
+### 0. API Overview (Root)
+
+`GET /`
+
+Returns a helpful overview of the API and its endpoints. This is what you see when you open the base URL in a browser (instead of a 404).
+
+**Success response — `200 OK`:**
+```json
+{
+  "name": "Task Manager API",
+  "message": "Welcome to the Task Manager API",
+  "endpoints": {
+    "POST /tasks": "Create a new task",
+    "GET /tasks": "Retrieve all tasks",
+    "GET /tasks/<id>": "Retrieve a task by id",
+    "PUT /tasks/<id>": "Update a task",
+    "DELETE /tasks/<id>": "Delete a task"
+  }
+}
+```
+
+---
+
 ### 1. Create a Task
 
 `POST /tasks`
@@ -263,6 +286,12 @@ The tests cover:
 ## Testing with curl
 
 Start the server first (`python app.py`), then run these from another terminal.
+
+**API overview (root):**
+```bash
+curl http://localhost:5000/
+```
+Expected output: HTTP status `200` and a JSON object listing the API name and all available endpoints.
 
 **Create a task:**
 ```bash
