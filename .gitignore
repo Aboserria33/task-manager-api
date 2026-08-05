@@ -18,4 +18,5 @@ env/
 *.log
 
 # Virtual environment
-.vscode/
+.vscode/*
+!.vscode/settings.json
